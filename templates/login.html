@@ -23,24 +23,39 @@
                 <li><a class="active" href="{{ url_for('index') }}">Home</a></li>
                 <li><a href="{{ url_for('products') }}">Products</a></li>
                 <li><a href="{{ url_for('favorites') }}"><i class="fa-regular fa-heart"></i></a></li>
-                <li><a href="{{ url_for('signin') }}"><i class="fa-regular fa-user"></i></a></li>
+                <li><a href="{{ url_for('login') }}"><i class="fa-regular fa-user"></i></a></li>
             </ul>
         </div>
     </section>
+    <div class="login">
+        <div class="wrapper" style="text-align: center;">
+            <form action="" method="post">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
 
-    <div class="container" style="text-align: center;">
-        <h1>Please login</h1>
-        <br>
-        <form action="" method="post">
-            <input type="text" placeholder="Email" name="email" value="{{
-          request.form.email }}">
-            <input type="password" placeholder="Password" name="password" value="{{
-          request.form.password }}">
-            <input class="btn btn-primary" type="submit" value="Login">
-        </form>
-        {% if error %}
-        <p class="error"><strong>Error:</strong> {{ error }}
-            {% endif %}
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="sumbit" class="btn">Login</button>
+
+                <div class="register-link">
+                <p>Don`t have an account? <a href="#">Register</a></p> 
+                </div>
+            </form>
+            {% if error %}
+            <p class="error"><strong>Error:</strong> {{ error }}
+                {% endif %}
+        </div>
     </div>
 
     <footer class="section-p1">

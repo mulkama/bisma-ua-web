@@ -14,9 +14,9 @@ def products():
 def favorites():
     return render_template("favorites.html")
 
-@app.route("/signin.html")
-def signin():
-    return render_template("signin.html")
+@app.route("/login.html")
+def login():
+    return render_template("login.html")
 
 @app.route("/signup.html")
 def signup():
