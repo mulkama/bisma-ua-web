@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="{{ url_for('index') }}"><img src="/static/images/logo.png" class="logo" alt="" style="height: 35px;"></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('products') }}">Products</a></li>
+                <li><a href="{{ url_for('favorites') }}"><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href="{{ url_for('signin') }}"><i class="fa-regular fa-user"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="banner">
+        <h2>Welcome!</h2>
+        <h4>Jewelwey created with heart and soul❤️</h4>
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="order">
+            <i class="fa-solid fa-bolt"></i>
+            <h4>ЗАМОВЛЯЙ 24/7</h4>
+            <h6>Оформлюй замовлення у зручний для себе час. Тепер не потрібно чекати годинами на відповідь в Direct</h6>
+        </div>
+
+        <div class="pay-online">
+            <i class="fa-solid fa-credit-card"></i>
+            <h4>СПЛАЧУЙ ОНЛАЙН</h4>
+            <h6>Безпечно оплачуй замовлення карткою онлайн або за допомогою Монобанк</h6>
+        </div>
+
+        <div class="fast-delivery">
+            <i class="fa-sharp-duotone fa-solid fa-box-open"></i>
+            <h4>ШВИДКО ОТРИМУЙ</h4>
+            <h6>Ми запакуємо і відправимо твоє замовлення зі швидкістю світла.</h6>
+        </div>
+
+        <div class="enjoy">
+            <i class="fa-solid fa-heart"></i>
+            <h4>НАСОЛОДЖУЙСЯ</h4>
+            <h6>Забери своє замовлення з відділення Нової Пошти та насолоджуйся своїми покупками, адже вони ідеальні!</h6>
+        </div>
+
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Каталог</h2>
+        <div class="pro-conteiner">
+            <div class="pro">
+                <img src="/static/images/products/IMG_1370.JPG" alt="">
+                <div class="des">
+                    <span>Намиста</span>
+                    <h5>Намисто зі скляними бусинками</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>700 UAH</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping fa-2x"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="/static/images/products/IMG_0835.JPG" alt="">
+                <div class="des">
+                    <span>Намиста</span>
+                    <h5>Королівське намисто з сердечками</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>700 UAH</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping fa-2x"></i></a>
+            </div>
+            <div class="pro">
+                <img src="/static/images/products/IMG_1425.JPG" alt="">
+                <div class="des">
+                    <span>Намиста</span>
+                    <h5>Намисто з кутиками в готичному стилі</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>800 UAH</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping fa-2x"></i></a>
+            </div>
+            <div class="pro">
+                <img src="/static/images/products/IMG_1961.JPG" alt="">
+                <div class="des">
+                    <span>Намиста</span>
+                    <h5>Намисто з отворами та мереживками</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>800 UAH</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping fa-2x"></i></a>
+            </div>
+            <div class="pro">
+                <img src="/static/images/products/IMG_3268.JPG" alt="">
+                <div class="des">
+                    <span>Інше</span>
+                    <h5>Ремінець на Apple Watch</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>800 UAH</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping fa-2x"></i></a>
+            </div>
+            <div class="pro">
+                <img src="/static/images/products/IMG_4472.JPG" alt="">
+                <div class="des">
+                    <span>Намиста</span>
+                    <h5>Червоно-чорна криза з японськими намистинками</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>1400 UAH</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping fa-2x"></i></a>
+            </div>
+            <div class="pro">
+                <img src="/static/images/products/IMG_7879.JPG" alt="">
+                <div class="des">
+                    <span>Дармовиси</span>
+                    <h5>Дармовис "Мапа України"</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>300 UAH</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping fa-2x"></i></a>
+            </div>
+            <div class="pro">
+                <img src="/static/images/products/IMG_7938.jpg" alt="">
+                <div class="des">
+                    <span>Намиста</span>
+                    <h5>Кривулька "Мавчина лють"</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>4000 UAH</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping fa-2x"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="/static/images/favicon.png">
+            <h4>Творча майстерня бісерних виробів</h4>
+            <div class="follow">
+                <div class="icon">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>МЕНЮ</h4>
+            <a href="{{ url_for('index') }}">Головна</a>
+            <a href="#">Про нас</a>
+            <a href="#">Контакти</a>
+            <a href="#">Благодійність</a>
+            <a href="#">Договір оферти</a>
+        </div>
+
+        <div class="col">
+            <h4>КАТАЛОГ</h4>
+            <a href="#">Намиста</a>
+            <a href="#">Браслети</a>
+            <a href="#">Дармовиси</a>
+            <a href="#">Патріотичне</a>
+            <a href="#">Ремінці</a>
+        </div>
+
+        <div class="col">
+            <h4>КОНТАКТИ</h4>
+            <p><strong>Телефон:</strong> +38(096)8743221</p>
+            <p><strong>ПН-СБ:</strong> 09:00 - 21:00</p>
+            <p><strong>НД:</strong> вихідний</p>
+        </div>
+
+        <div class="copyright">
+            <p>2024, Kamila Muliar - Bisma UA</p>
+        </div>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
