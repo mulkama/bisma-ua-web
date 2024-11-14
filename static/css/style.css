@@ -304,11 +304,12 @@ footer .copyright{
     text-align: center;
 }
 
-.login{
+.login,
+.signup{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 80vh;
     background: rgb(255, 255, 255);
 }
 
