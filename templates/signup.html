@@ -17,7 +17,8 @@
 <body>
 
     <section id="header">
-        <a href="{{ url_for('index') }}"><img src="/static/images/logo.png" class="logo" alt="" style="height: 35px;"></a>
+        <a href="{{ url_for('index') }}"><img src="/static/images/logo.png" class="logo" alt=""
+                style="height: 35px;"></a>
         <div>
             <ul id="navbar">
                 <li><a class="active" href="{{ url_for('index') }}">Home</a></li>
@@ -29,27 +30,27 @@
     </section>
     <div class="signup">
         <div class="wrapper" style="text-align: center;">
-            <form action="" method="post">
+            <form id="signupform" action="" method="post">
                 <h1>Sign up</h1>
                 <div class="input-box">
-                    <input type="text" placeholder="Username" required>
+                    <input type="text" name="username" placeholder="Username" required>
                     <i class="fa-solid fa-user"></i>
                 </div>
 
                 <div class="input-box">
-                    <input type="password" placeholder="Password" required>
+                    <input type="text" name="email" placeholder="Email" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Password" required>
                     <i class="fa-solid fa-lock"></i>
                 </div>
 
-                <div class="remember-forgot">
-                    <label><input type="checkbox">Remember me</label>
-                    <a href="#">Forgot password?</a>
-                </div>
-
-                <button type="sumbit" class="btn">Sign up</button>
+                <button type="submit" class="btn">Sign up</button>
 
                 <div class="register-link">
-                <p>Have an account? <a href="{{ url_for('login') }}">Login</a></p> 
+                    <p>Have an account? <a href="{{ url_for('login') }}">Login</a></p>
                 </div>
             </form>
             {% if error %}
@@ -64,7 +65,8 @@
             <h4>Творча майстерня бісерних виробів</h4>
             <div class="follow">
                 <div class="icon">
-                    <a href="https://www.instagram.com/bisma_ua_?igsh=aHB5dWptc2g0cXp1"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    <a href="https://www.instagram.com/bisma_ua_?igsh=aHB5dWptc2g0cXp1"><i
+                            class="fa-brands fa-instagram fa-2x"></i></a>
                     <a href="https://pin.it/2EN8XM7Ub"><i class="fa-brands fa-pinterest fa-2x"></i></a>
                 </div>
             </div>
