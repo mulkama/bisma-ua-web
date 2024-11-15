@@ -1,0 +1,86 @@
+[
+    {
+        "category": "Намиста",
+        "name": "Намисто зі скляними бусинками",
+        "price": "700 UAH",
+        "image": "/static/images/products/IMG_1370.JPG"
+    },
+    {
+        "category": "Намиста",
+        "name": "Королівське намисто з сердечками",
+        "price": "700 UAH",
+        "image": "/static/images/products/IMG_0835.JPG"
+    },
+    {
+        "category": "Намиста",
+        "name": "Намисто з кутиками в готичному стилі",
+        "price": "800 UAH",
+        "image": "/static/images/products/IMG_1425.JPG"
+    },    {
+        "category": "Намиста",
+        "name": "Намисто з отворами та мереживками",
+        "price": "800 UAH",
+        "image": "/static/images/products/IMG_1961.JPG"
+    },    {
+        "category": "Ремінці",
+        "name": "Квіткосерце Херсонщини",
+        "price": "800 UAH",
+        "image": "/static/images/products/IMG_3268.JPG"
+    },    {
+        "category": "Намиста",
+        "name": "Червоно-чорна криза з японськими намистинками",
+        "price": "1400 UAH",
+        "image": "/static/images/products/IMG_4472.JPG"
+    },    {
+        "category": "Дармовиси",
+        "name": "Мапа України",
+        "price": "300 UAH",
+        "image": "/static/images/products/IMG_7879.JPG"
+    },    {
+        "category": "Намиста",
+        "name": "Кривулька 'Мавчина лють'",
+        "price": "4000 UAH",
+        "image": "/static/images/products/IMG_7938.jpg"
+    },    {
+        "category": "Браслети",
+        "name": "Класична шамбала з чорною скляною намистинкою",
+        "price": "300 UAH",
+        "image": "/static/images/products/IMG_3004.JPG"
+    },    {
+        "category": "Браслети",
+        "name": "Бабовняна зірка",
+        "price": "700 UAH",
+        "image": "/static/images/products/IMG_3024.JPG"
+    },    {
+        "category": "Ремінці",
+        "name": "Донецькі зорі",
+        "price": "800 UAH",
+        "image": "/static/images/products/IMG_3763.JPG"
+    },    {
+        "category": "Дармовиси",
+        "name": "Стяги країн",
+        "price": "200 UAH",
+        "image": "/static/images/products/IMG_4473.JPG"
+    },    {
+        "category": "Намиста",
+        "name": "Молочна силянка-сіточка",
+        "price": "1200 UAH",
+        "image": "/static/images/products/IMG_6771.JPG"
+    },    {
+        "category": "Дармовиси",
+        "name": "Дармовиси",
+        "price": "300 UAH",
+        "image": "/static/images/products/IMG_6896.JPG"
+    },    {
+        "category": "Браслети",
+        "name": "Латвійські мотиви",
+        "price": "600 UAH",
+        "image": "/static/images/products/IMG_9029.JPG"
+    },    {
+        "category": "Намиста",
+        "name": "Ніжна силянка з мереживками",
+        "price": "700 UAH",
+        "image": "/static/images/products/IMG_9044.JPG"
+    }
+
+]
