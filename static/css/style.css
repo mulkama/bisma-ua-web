@@ -250,6 +250,24 @@ body {
     right: 20px;
 }
 
+#pagination{
+    text-align: center;
+}
+
+#pagination a{
+    text-decoration: none;
+    background-color: #725B4E;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+}
+#pagination a i{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
 footer{
     background-color: #725B4E;
     display: flex;
@@ -409,3 +427,30 @@ footer .copyright{
 .register-link p a:hover{
     text-decoration: underline;
 }
+
+.profile-img{
+    width: 30%;
+    border-radius: 30px;
+}
+
+/* 
+@media (max-width:799px) {
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: 0px;
+        height: 100vh;
+        width: 300px;
+        background-color: white;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, .1);
+        padding: 80px 0 10px;
+    }
+
+    #navbar li{
+        margin-bottom: 25px;
+    }
+} */

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+    <title>Log in Bisma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="{{ url_for('index') }}"><img src="/static/images/logo.png" class="logo" alt="" style="height: 35px;"></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('products') }}">Products</a></li>
+                <li><a href="{{ url_for('favorites') }}"><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href="{{ url_for('login') }}"><i class="fa-regular fa-user"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="login">
+        <div class="wrapper" style="text-align: center;">
+            <form action="" method="post">
+                <h1>My profile</h1>
+                <img src="/static/images/IMG_4638.JPG" alt="" class="profile-img">
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Email" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <button type="sumbit" class="btn">Sumbit</button>
+
+            </form>
+            {% if error %}
+            <p class="error"><strong>Error:</strong> {{ error }}
+                {% endif %}
+        </div>
+    </div>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="/static/images/favicon.png">
+            <h4>Творча майстерня бісерних виробів</h4>
+            <div class="follow">
+                <div class="icon">
+                    <a href="https://www.instagram.com/bisma_ua_?igsh=aHB5dWptc2g0cXp1"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    <a href="https://pin.it/2EN8XM7Ub"><i class="fa-brands fa-pinterest fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>МЕНЮ</h4>
+            <a href="{{ url_for('index') }}">Головна</a>
+            <a href="#">Про нас</a>
+            <a href="#">Контакти</a>
+            <a href="#">Благодійність</a>
+            <a href="#">Договір оферти</a>
+        </div>
+
+        <div class="col">
+            <h4>КАТАЛОГ</h4>
+            <a href="#">Намиста</a>
+            <a href="#">Браслети</a>
+            <a href="#">Дармовиси</a>
+            <a href="#">Патріотичне</a>
+            <a href="#">Ремінці</a>
+        </div>
+
+        <div class="col">
+            <h4>КОНТАКТИ</h4>
+            <p><strong>Телефон:</strong> +38(096)8743221</p>
+            <p><strong>ПН-СБ:</strong> 09:00 - 21:00</p>
+            <p><strong>НД:</strong> вихідний</p>
+        </div>
+
+        <div class="copyright">
+            <p>2024, Kamila Muliar - Bisma UA</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
