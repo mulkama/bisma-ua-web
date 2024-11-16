@@ -178,6 +178,60 @@ body {
     color: white;
 }
 
+#categories{
+    text-align: center;
+}
+
+#categories .categories-conteiner{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#categories .category{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#categories .category img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#categories .category-all{
+    width: 100%;
+    min-width: 250px;
+    padding: 10px 12px;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#categories .category-all img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#categories .category img:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.10);
+    width: 105%;
+    transition: 0.2s ease;
+    align-items: center;
+}
+
+#categories .category .des{
+    text-align: center;
+    padding: 10px 0;
+}
+
 #product1{
     text-align: center;
 }
@@ -398,7 +452,7 @@ footer .copyright{
     text-decoration: underline;
 }
 
-.wrapper .btn {
+.wrapper .btn-s{
     width: 100%;
     height: 45px;
     background-color: #725B4E;
@@ -410,6 +464,22 @@ footer .copyright{
     font-size: 16px;
     color: white;
     font-weight: 600;
+    margin: 5px 0;
+}
+
+.wrapper .btn-d,.btn-l{
+    width: 100%;
+    height: 45px;
+    background-color: #ffffff;
+    border: 1px solid #725B4E;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #725B4E;
+    font-weight: 600;
+    margin: 5px 0;
 }
 
 .wrapper .register-link{
