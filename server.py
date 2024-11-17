@@ -122,7 +122,7 @@ def login(*args, **kwargs):
 def signup(*args, **kwargs):
     error = None
     if request.method == "POST":
-        username = request.form["email"]
+        username = request.form["username"]
         email = request.form["email"]
         password = request.form["password"]
         user = User.query.filter_by(email=email).first()
@@ -142,10 +142,43 @@ def signup(*args, **kwargs):
     return render_template("signup.html", error=error)
 
 
+@app.route("/logout/")
+@require_login
+def logout(user: User, *args, **kwargs):
+    if "logged_in" in session and session["logged_in"] == user.id:
+        session.pop("logged_in")
+        session.pop("user_id")
+        session.pop("user_email")
+    return redirect(url_for("index"))
+
+
 @app.route("/api/products/", methods=["GET", "POST", "DELETE"])
 @require_token
 def api_products(user: User, *args, **kwargs):
     return json.loads(open("products.json", encoding="utf-8").read())
+
+
+@app.route("/api/user/", methods=["GET", "POST", "UPDATE", "DELETE"])
+@require_token
+def api_user(user: User, *args, **kwargs):
+    if request.method == "GET":
+        user = User.query.filter_by(email=user.email).first()
+        return {"id": user.id, "username": user.username, "email": user.email}
+    elif request.method == "POST":
+        return 403
+    elif request.method == "UPDATE":
+        user.username = request.json["username"]
+        db.session.add(user)
+        db.session.commit()
+        return {"success": True}
+    elif request.method == "DELETE":
+        if "logged_in" in session and session["logged_in"] == user.id:
+            session.pop("logged_in")
+            session.pop("user_id")
+            session.pop("user_email")
+        db.session.delete(user)
+        db.session.commit()
+        return {"success": True}
 
 
 @app.route("/api/favorites/", methods=["GET", "POST", "DELETE"])
@@ -157,7 +190,7 @@ def api_favorites(user: User, *args, **kwargs):
     elif request.method == "POST":
         return 403
     elif request.method == "UPDATE":
-        user.username = request.json["username"]
+        user.username = request.form["username"]
         db.session.add(user)
         db.session.commit()
         return 200
