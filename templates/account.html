@@ -34,16 +34,17 @@
                 <h1>My profile</h1>
                 <img src="/static/images/IMG_4638.JPG" alt="" class="profile-img">
                 <div class="input-box">
-                    <input type="text" placeholder="Username" required>
+                    <input type="text" placeholder="Username" required name="username">
                     <i class="fa-solid fa-user"></i>
                 </div>
 
                 <button type="sumbit" class="btn-s">Зберегти</button>
-                <button type="sumbit" class="btn-l">Вийти</button>
-                <button type="sumbit" class="btn-d">Видалити профіль</button>
-                
-
+            
             </form>
+
+            <button type="button" class="btn-l">Вийти</button>
+            <button type="button" class="btn-d">Видалити профіль</button>
+            
             {% if error %}
             <p class="error"><strong>Error:</strong> {{ error }}
                 {% endif %}
