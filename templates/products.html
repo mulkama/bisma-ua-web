@@ -8,14 +8,15 @@
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
     <title>Bisma Products</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <script src="/static/js/products.js"></script>
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
 <body>
 
     <section id="header">
-        <a href="{{ url_for('index') }}"><img src="/static/images/logo.png" class="logo" alt="" style="height: 35px;"></a>
+        <a href="{{ url_for('index') }}"><img src="/static/images/logo.png" class="logo" alt=""
+                style="height: 35px;"></a>
         <div>
             <ul id="navbar">
                 <li><a class="active" href="{{ url_for('index') }}">Home</a></li>
@@ -27,274 +28,26 @@
     </section>
 
     <section id="product1" class="section-p1">
-        <h2>Усі категорії товарів</h2>
-        <div class="pro-conteiner">
-            <div class="pro">
-                <img src="/static/images/products/IMG_1370.JPG" alt="">
-                <div class="des">
-                    <span>Намиста</span>
-                    <h5>Намисто зі скляними бусинками</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+        <h2>Усі категорії</h2>
+        <div class="pro-container">
+            <template id="product-template">
+                <div class="pro">
+                    <img class="product-image" src="" alt="Product Image">
+                    <div class="des">
+                        <span class="product-category">Category</span>
+                        <h5 class="product-name">Name</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="product-price">Price</h4>
                     </div>
-                    <h4>700 UAH</h4>
+                    <a class="product-favorite" href="#"><i class="fa-solid fa-heart heart"></i></a>
                 </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="/static/images/products/IMG_0835.JPG" alt="">
-                <div class="des">
-                    <span>Намиста</span>
-                    <h5>Королівське намисто з сердечками</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>700 UAH</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="/static/images/products/IMG_1425.JPG" alt="">
-                <div class="des">
-                    <span>Намиста</span>
-                    <h5>Намисто з кутиками в готичному стилі</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>800 UAH</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="/static/images/products/IMG_1961.JPG" alt="">
-                <div class="des">
-                    <span>Намиста</span>
-                    <h5>Намисто з отворами та мереживками</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>800 UAH</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="/static/images/products/IMG_3268.JPG" alt="">
-                <div class="des">
-                    <span>Ремінці</span>
-                    <h5>Квіткосерце Херсонщини</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>800 UAH</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="/static/images/products/IMG_4472.JPG" alt="">
-                <div class="des">
-                    <span>Намиста</span>
-                    <h5>Червоно-чорна криза з японськими намистинками</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>1400 UAH</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="/static/images/products/IMG_7879.JPG" alt="">
-                <div class="des">
-                    <span>Дармовиси</span>
-                    <h5>Мапа України</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>300 UAH</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="/static/images/products/IMG_7938.jpg" alt="">
-                <div class="des">
-                    <span>Намиста</span>
-                    <h5>Кривулька "Мавчина лють"</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>4000 UAH</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="/static/images/products/IMG_3004.JPG" alt="">
-                <div class="des">
-                    <span>Браслети</span>
-                    <h5>Класична шамбала з чорною скляною намистинкою</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>300 UAH</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="/static/images/products/IMG_3024.JPG" alt="">
-                <div class="des">
-                    <span>Браслети</span>
-                    <h5>"Бабовняна зірка"</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>700 UAH</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="/static/images/products/IMG_3763.JPG" alt="">
-                <div class="des">
-                    <span>Ремінці</span>
-                    <h5>Донецькі зорі</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>800 UAH</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="/static/images/products/IMG_4473.JPG" alt="">
-                <div class="des">
-                    <span>Дармовиси</span>
-                    <h5>Стяги країн</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>200 UAH</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="/static/images/products/IMG_6771.JPG" alt="">
-                <div class="des">
-                    <span>Намиста</span>
-                    <h5>Молочна силянка-сіточка</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>1200 UAH</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="/static/images/products/IMG_6896.JPG" alt="">
-                <div class="des">
-                    <span>Дармовиси</span>
-                    <h5>Біблія</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>300 UAH</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="/static/images/products/IMG_9029.JPG" alt="">
-                <div class="des">
-                    <span>Браслети</span>
-                    <h5>Латвійські мотиви</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>600 UAH</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="/static/images/products/IMG_9044.JPG" alt="">
-                <div class="des">
-                    <span>Намиста</span>
-                    <h5>Ніжна силянка з мереживками</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>700 UAH</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-heart heart"></i></a>
-            </div>
+            </template>
         </div>
     </section>
 
@@ -310,7 +63,8 @@
             <h4>Творча майстерня бісерних виробів</h4>
             <div class="follow">
                 <div class="icon">
-                    <a href="https://www.instagram.com/bisma_ua_?igsh=aHB5dWptc2g0cXp1"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    <a href="https://www.instagram.com/bisma_ua_?igsh=aHB5dWptc2g0cXp1"><i
+                            class="fa-brands fa-instagram fa-2x"></i></a>
                     <a href="https://pin.it/2EN8XM7Ub"><i class="fa-brands fa-pinterest fa-2x"></i></a>
                 </div>
             </div>
@@ -349,4 +103,5 @@
     <script src="/static/js/script.js"></script>
 
 </body>
+
 </html>

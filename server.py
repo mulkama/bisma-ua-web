@@ -2,6 +2,7 @@ import functools
 import hashlib
 from datetime import datetime, timedelta
 from urllib import parse
+import json
 import re
 
 import jwt
@@ -141,9 +142,15 @@ def signup(*args, **kwargs):
     return render_template("signup.html", error=error)
 
 
-@app.route("/api/users/", methods=["GET", "POST", "UPDATE", "DELETE"])
+@app.route("/api/products/", methods=["GET", "POST", "DELETE"])
 @require_token
-def api(user: User, *args, **kwargs):
+def api_products(user: User, *args, **kwargs):
+    return json.loads(open("products.json").read())
+
+
+@app.route("/api/favorites/", methods=["GET", "POST", "DELETE"])
+@require_token
+def api_favorites(user: User, *args, **kwargs):
     if request.method == "GET":
         user = User.query.filter_by(email=user.email).first()
         return {"id": user.id, "username": user.username, "email": user.email}
