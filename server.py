@@ -145,7 +145,7 @@ def signup(*args, **kwargs):
 @app.route("/api/products/", methods=["GET", "POST", "DELETE"])
 @require_token
 def api_products(user: User, *args, **kwargs):
-    return json.loads(open("products.json").read())
+    return json.loads(open("products.json", encoding="utf-8").read())
 
 
 @app.route("/api/favorites/", methods=["GET", "POST", "DELETE"])
