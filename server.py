@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 from urllib import parse
 import json
 import re
+import itertools
 
 import jwt
 from flask import Flask, redirect, render_template, request, session, url_for
@@ -152,10 +153,18 @@ def logout(user: User, *args, **kwargs):
     return redirect(url_for("index"))
 
 
-@app.route("/api/products/", methods=["GET", "POST", "DELETE"])
+@app.route("/api/products/", methods=["GET", "POST"])
 @require_token
 def api_products(user: User, *args, **kwargs):
-    return json.loads(open("products.json", encoding="utf-8").read())
+    with open("products.json", encoding="utf-8") as f:
+        products = json.loads(f.read())
+        iproducts = itertools.cycle(products)
+
+    # Get query parameters
+    length = request.args.get("length", default=10, type=int)
+    offset = request.args.get("offset", default=0, type=int)
+    result = list(itertools.islice(iproducts, offset, offset + length))
+    return result
 
 
 @app.route("/api/user/", methods=["GET", "POST", "UPDATE", "DELETE"])

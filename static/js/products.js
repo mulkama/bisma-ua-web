@@ -1,4 +1,11 @@
 let isLoading = false;
+let length = 10;
+let offset = 0;
+
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 async function getCookie(name) {
     const value = `; ${document.cookie}`;
@@ -15,7 +22,7 @@ async function fetchProducts() {
     }
 
     try {
-        const response = await fetch('/api/products/', { // Replace with your API URL
+        const response = await fetch(`/api/products/?length=${length}&offset=${offset}`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -26,6 +33,7 @@ async function fetchProducts() {
         if (!response.ok) {
             throw new Error(`Failed to fetch products: ${response.statusText}`);
         }
+        offset+=length
 
         const products = await response.json();
         populateProducts(products);
@@ -55,6 +63,7 @@ function populateProducts(products) {
 const observer = new IntersectionObserver(
     async (entries) => {
       if (entries[0].isIntersecting && !isLoading) {
+        await sleep(500);
         await fetchProducts();
       }
     },
